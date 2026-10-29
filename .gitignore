@@ -7,3 +7,6 @@ public/
 private/
 *.key
 .DS_Store
+
+# Full instructions are maintained only in backend secrets.
+lib/scope-prompt.md
