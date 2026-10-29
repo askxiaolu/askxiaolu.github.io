@@ -1,5 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {answerQuestion} from '../lib/rag.mjs';import api from '../api/chat.mjs';
+import {answerQuestion,cleanAnswer} from '../lib/rag.mjs';import api from '../api/chat.mjs';
+test('internal file markers are not shown in the chat',()=>assert.equal(cleanAnswer('先准备**成绩单**。fileciteturn0file5'),'先准备成绩单。'));
 test('a normal self-introduction is welcomed without rejecting the user',async()=>{
  const r=await answerQuestion('你好，我是大二信管学生',[],{},()=>{throw Error('must not call')});assert.equal(r.status,'help');assert.match(r.answer,/欢迎|认识/);
 });
