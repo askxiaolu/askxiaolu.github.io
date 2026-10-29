@@ -1,0 +1,7 @@
+{
+  "name": "askxiaolu-site",
+  "private": true,
+  "type": "module",
+  "engines": {"node": "22.x"},
+  "scripts": {"test": "node --test", "check": "node --check api/chat.mjs"}
+}
